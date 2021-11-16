@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.tiny.cloud/1/j1r8zopvath74avejol238b9i0zfrgoc117gi6wp7d3g3quw/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+            language: "ja", // 言語 = 日本語 
+            // skin: 'oxide-dark',
+            // statusbar: false,
+            content_css: 'index.css',
+            plugins: [
+                'print preview fullpage directionality visualblocks visualchars fullscreen image',
+                'media template code codesample nonbreaking anchor toc insertdatetime advlist lists textcolor',
+                'wordcount imagetools contextmenu colorpicker textpattern help',
+            ],
+            menubar: 'file edit view',
+            toolbar: [
+                'undo redo | formatselect | bold italic strikethrough forecolor backcolor | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent ',
+                'removeformat | image | directionality visualblocks visualchars | codesample code preview fullscreen | template | anchor insertdatetime ',
+            ],
+            // plugins: 'template image imagetools',
+            // toolbar: 'template | image',
+            templates: [
+                {
+                    title: 'Two image template',
+                    description: 'Two image template',
+                    url: 'template.html'
+                }
+            ]
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>TinyMCE Quick Start Guide</h1>
+    <form method="post">
+        <textarea id="mytextarea">Hello, World!</textarea>
+    </form>
+</body>
+
+</html>
