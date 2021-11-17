@@ -56,6 +56,12 @@ img:first-child {
 
 .scroll-image {
   margin: 1em 0;
+  min-width: 50rem;
+  min-height: 30rem;
+  background-image: url(placeholder/table\ placeholder\ 1488x574.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: contain;
 }
 
 .notice {
@@ -64,6 +70,22 @@ img:first-child {
   margin-bottom: 2em;
   font-size: 13px;
   padding-left: 0;
+}
+.img-holder-2{
+  min-width: 28rem;
+  min-height: 25rem;
+  background-image: url(placeholder/placeholder\ 1000x660.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: contain;
+}
+.img-holder-full{
+  min-width: 56rem;
+  min-height: 50rem;
+  background-image: url(placeholder/placeholder\ 2000x1320\ .png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: contain;
 }
 
 @media only screen and (max-width: 768px) {
@@ -80,6 +102,14 @@ img:first-child {
   .scroll-image > img {
     max-width: 768px;
   }
+  .img-holder-2{
+    min-width: 15rem;
+    min-height: 15rem;
+  }
+  .img-holder-full{
+    min-width: 28rem;
+    min-height: 28rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -89,5 +119,13 @@ img:first-child {
 
   .image-col {
     width: 100%;
+  }
+  .img-holder-2{
+    min-width: 10rem;
+    min-height: 10rem;
+  }
+  .img-holder-full{
+    min-width: 20rem;
+    min-height: 20rem;
   }
 }
