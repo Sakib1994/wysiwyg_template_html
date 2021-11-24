@@ -40,20 +40,20 @@
                 var xhr, formData;
                 xhr = new XMLHttpRequest();
                 xhr.withCredentials = false;
-                xhr.open('POST', 'tinymce_upload.php');
+                xhr.open('POST', 'http://admin-stg.doctors-next.local/api/upload');
                 xhr.onload = function() {
                     var json;
                     if (xhr.status != 200) {
                         failure('HTTP Error: ' + xhr.status);
                         return;
-                    }console.log(xhr.responseText)
+                    }
                     json = JSON.parse(xhr.responseText);
-
+                    console.log('http://admin-stg.doctors-next.local/' + json.location)
                     if (!json || typeof json.location != 'string') {
                         failure('Invalid JSON: ' + xhr.responseText);
                         return;
                     }
-                    success(json.location);
+                    success('http://admin-stg.doctors-next.local/' + json.location);
                 };
                 formData = new FormData();
                 formData.append('file', blobInfo.blob(), blobInfo.filename());
